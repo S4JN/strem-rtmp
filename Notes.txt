@@ -1,0 +1,2 @@
+RTMP: stands for Real Time Messaging Protocol
+It facilates transmission of audio and video data in real time.
