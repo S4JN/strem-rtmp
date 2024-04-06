@@ -28,7 +28,7 @@ const options = [
     '-b:a', '128k',
     '-ar', 128000 / 4,
     '-f', 'flv',
-    `./`,
+    `rtmp://a.rtmp.youtube.com/live2/80um-70h4-b7xj-r9ck-9czq`,
 ];
 
 const ffmpegProcess = spawn('ffmpeg',options);
@@ -48,7 +48,7 @@ io.on("connection",socket =>{
     console.log("Socket Connected ", socket.id);
     socket.on("binarystream", stream =>{
         console.log("Binary Stream Incoming...",stream);
-        ffmpegProcess.stdin.write(stream,()=>{
+        ffmpegProcess.stdin.write(stream,(err)=>{
             console.log("Error", err);
         })
     })

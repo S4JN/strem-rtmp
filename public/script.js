@@ -1,6 +1,7 @@
 
 const userVideo = document.getElementById("user-video")
 const startButton = document.getElementById("start-btn")
+const screenShareButton = document.getElementById("screen-share");
 
 const state = { media: null }
 const socket = io()
